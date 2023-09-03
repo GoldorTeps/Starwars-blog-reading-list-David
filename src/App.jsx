@@ -20,6 +20,7 @@ function App() {
             img={`https://starwars-visualguide.com/assets/img/characters/${person.result.uid}.jpg`}
             title={person.result.properties.name}
             key={person.result.uid}
+            to= {`/people/${person.result.uid}`}
           />
         ))}
       </div>
@@ -30,6 +31,7 @@ function App() {
             img={`https://starwars-visualguide.com/assets/img/planets/${planets.result.uid}.jpg`}
             title={planets.result.properties.name}
             key={planets.result.uid}
+            to= {`/planets/${planets.result.uid}`}
           />
         ))}
       </div>
@@ -41,6 +43,7 @@ function App() {
               img={`https://starwars-visualguide.com/assets/img/vehicles/${vehicles.result.uid}.jpg`}
               title={vehicles.result.properties.model}
               key={vehicles.result.uid}
+              to= {`/vehicles/${vehicles.result.uid}`}
             />
           ))
         ) : (
