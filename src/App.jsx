@@ -2,6 +2,7 @@ import React from 'react';
 import useAppContext from './context/appContext';
 import Card from './components/card';
 import Navbar from './components/navbar';
+import DetailsCard from './components/detailsCard';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
             title={person.result.properties.name}
             key={person.result.uid}
             to= {`/people/${person.result.uid}`}
+            uid={person.result.uid}
           />
         ))}
       </div>
@@ -32,6 +34,7 @@ function App() {
             title={planets.result.properties.name}
             key={planets.result.uid}
             to= {`/planets/${planets.result.uid}`}
+            uid={planets.result.uid}
           />
         ))}
       </div>
@@ -44,6 +47,7 @@ function App() {
               title={vehicles.result.properties.model}
               key={vehicles.result.uid}
               to= {`/vehicles/${vehicles.result.uid}`}
+              uid={vehicles.result.uid}
             />
           ))
         ) : (
