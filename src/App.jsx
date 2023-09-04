@@ -2,7 +2,7 @@ import React from 'react';
 import useAppContext from './context/appContext';
 import Card from './components/card';
 import Navbar from './components/navbar';
-import DetailsCard from './components/detailsCard';
+
 
 import './App.css';
 

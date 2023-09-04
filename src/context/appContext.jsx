@@ -9,6 +9,20 @@ export const AppProvider = ({children}) => {
     const [people, setPeople] = useState ([])
     const [vehicles, setVehicles] = useState ([])
     const [planets, setPlanets] = useState ([])
+    
+
+    const defaultFavorites = [];
+    const [favorites, setFavorites] = useState(defaultFavorites);
+
+    const addToFavorites = (item) => {
+        setFavorites([...favorites, item]);
+      };
+      
+      const removeFromFavorites = (item) => {
+        const updatedFavorites = favorites.filter((fav) => fav !== item);
+        setFavorites(updatedFavorites);
+      };
+      
 
     useEffect (()=> {
     
@@ -36,6 +50,9 @@ export const AppProvider = ({children}) => {
         people,
         vehicles,
         planets,
+        favorites,
+        addToFavorites,
+        removeFromFavorites,
     }
 
     return (
